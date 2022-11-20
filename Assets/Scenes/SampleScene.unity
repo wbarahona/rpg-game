@@ -22241,6 +22241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1504098902}
+  cam: {fileID: 519420031}
 --- !u!58 &1504098904
 CircleCollider2D:
   m_ObjectHideFlags: 0
