@@ -2,40 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIController : MonoBehaviour
-{
-    public float moveSpeed = 2f;
-    public float rotationSpeed = 200f;
+public class AIMovement : MonoBehaviour {
+    public float speed = 6.5f;
+    public float avoidDistance = 1f;
+    public float moveDelay = 3f; // Delay between movements in seconds
+    public LayerMask obstacleLayer;
 
-    private Vector2 moveDirection;
+    private Rigidbody2D rb;
 
-    void Start()
-    {
-        // Start moving in a random direction
-        moveDirection = Random.insideUnitCircle.normalized;
+    void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        StartCoroutine(MoveRandomly());
     }
 
-    void Update()
-    {
-        // Move the AI
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
-
-        // Rotate the AI towards its movement direction
-        float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, targetAngle), rotationSpeed * Time.deltaTime);
-
-        // Check for collisions with 2D colliders
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDirection, 0.5f);
-        if (hit.collider != null)
+    IEnumerator MoveRandomly() {
+        while (true)
         {
-            // Change direction if collided with a 2D collider
-            moveDirection = Random.insideUnitCircle.normalized;
+            Vector2 direction = GetRandomDirection();
+            rb.velocity = direction * speed;
+
+            if (CheckForObstacles()) {
+                rb.velocity = -direction * speed;
+            }
+
+            yield return new WaitForSeconds(moveDelay);
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Change direction if collided with another object
-        moveDirection = Random.insideUnitCircle.normalized;
+    private Vector2 GetRandomDirection() {
+        int randomInt = Random.Range(0, 4);
+        switch (randomInt) {
+            case 0:
+                return Vector2.up;
+            case 1:
+                return Vector2.down;
+            case 2:
+                return Vector2.left;
+            default:
+                return Vector2.right;
+        }
+    }
+
+    private bool CheckForObstacles() {
+        RaycastHit2D hitUp = Physics2D.Raycast(transform.position, Vector2.up, avoidDistance, obstacleLayer);
+        RaycastHit2D hitDown = Physics2D.Raycast(transform.position, Vector2.down, avoidDistance, obstacleLayer);
+        RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector2.left, avoidDistance, obstacleLayer);
+        RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector2.right, avoidDistance, obstacleLayer);
+
+        if (hitUp.collider != null || hitDown.collider != null || hitLeft.collider != null || hitRight.collider != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
