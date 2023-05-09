@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
     Vector2 movement;
-    Vector2 mousePos;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,16 +19,10 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        Debug.Log(mousePos);
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        Vector2 lookDir = mousePos - rb.position;
-        // float angle = Mathf.Atan2();
     }
 }
