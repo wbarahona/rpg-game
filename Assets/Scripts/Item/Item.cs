@@ -12,19 +12,34 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+  public enum ArmorPiece
+  {
+    head,
+    chest,
+    legs
+  }
+
   public string itemName = "Default Name";
   public string itemDescription = "Default Description";
   public Sprite itemIcon;
   public int itemPower = 1;
   public ItemMaterial itemMaterial;
-  public string itemStat = "Default Stat";
+  public int craftingMaterialQuantity = 1;
+  public Stats.StatsType statName;
   public bool isWeapon = false;
   public bool isShield = false;
   public bool isArmor = false;
-  public string armorPiece = "Default Piece";
+  public ArmorPiece armorPiece;
   public bool isEquipped = false;
   public int itemQuantity = 1;
   public int itemWeight = 1;
   public static int itemSellValue = 1;
   public int itemBuyValue = Mathf.RoundToInt(itemSellValue * 0.1f) + itemSellValue;
+  public float spawnChance = 1f;
+  public GameObject gameItemLabel;
+
+  private void Start()
+  {
+    gameItemLabel.GetComponentInChildren<TextMesh>().text = "x" + itemQuantity.ToString();
+  }
 }

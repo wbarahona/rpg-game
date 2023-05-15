@@ -44,6 +44,15 @@ TagManager:
   - name: Background
     uniqueID: 3108713735
     locked: 0
+  - name: WorldObjects
+    uniqueID: 1968634255
+    locked: 0
+  - name: WorldCharacters
+    uniqueID: 1335160899
+    locked: 0
   - name: Player
     uniqueID: 3344097575
+    locked: 0
+  - name: Effects
+    uniqueID: 1631688793
     locked: 0
