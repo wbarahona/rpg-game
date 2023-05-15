@@ -10,25 +10,63 @@ using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour
 {
-  public enum CharacterClass
+  public enum CharacterGameClass
   {
+    villager,
     warrior,
     mage,
     rogue,
     cleric,
+    merchant
+  }
+
+  public enum CharacterType
+  {
+    player,
+    npc,
+    boss,
     merchant,
     questGiver,
-    questReceiver,
-    enemy,
-    boss
+    questReceiver
   }
+
+  public enum CharacterStatus
+  {
+    normal,
+    poisoned,
+    paralyzed,
+    confused,
+    blind,
+    silenced,
+    cursed,
+    petrified,
+    asleep,
+    dead
+  }
+
+  public enum CharacterMood
+  {
+    happy,
+    sad,
+    angry,
+    scared,
+    confused,
+    surprised,
+    disgusted,
+    neutral
+  }
+  public int characterID = 0;
   public string characterName = "Default Name";
   public string characterDescription = "Default Description";
-  public CharacterClass characterClass;
+  public CharacterGameClass characterClass;
+  public CharacterType characterType;
+  public CharacterStatus characterStatus;
+  public CharacterMood characterMood;
+  public Sprite characterIcon;
   public int health = 100;
-  public int maxHealth { get; private set; } = 100;
+  public int maxHealth = 100;
   public int mana = 100;
-  public int maxMana { get; private set; } = 100;
+  public int maxMana = 100;
   public int strength = 1;
   public int defense = 1;
   public int speed = 1;
@@ -39,13 +77,6 @@ public class CharacterStats : MonoBehaviour
   public int experienceToNextLevel = 100;
   public bool isDead = false;
   public bool isActive = true;
-  public bool isPlayer = false;
-  public bool isNPC = false;
-  public bool isEnemy = false;
-  public bool isBoss = false;
-  public bool isMerchant = false;
-  public bool isQuestGiver = false;
-  public bool isQuestReceiver = false;
   public bool canMove = true;
   public bool canAttack = true;
   public bool canUseMagic = true;
@@ -58,28 +89,73 @@ public class CharacterStats : MonoBehaviour
   public Item armorHeadEquipped;
   public Item armorChestEquipped;
   public Item armorLegEquipped;
-  public GameObject characterHealthBar;
+  public GameObject characterVisualCues;
   public GameObject characterLabel;
+  private GameObject characterHealthBarWrapper;
+  private Slider characterHealthBar;
+  private TextMesh characterOverheadLabel;
+  private OverheadBubble characterOverheadBubble;
 
   private void Start()
   {
-    characterHealthBar.GetComponentInChildren<Slider>().maxValue = maxHealth;
-    characterHealthBar.GetComponentInChildren<Slider>().value = health;
-    characterLabel.GetComponentInChildren<TextMesh>().text = characterName;
+    characterHealthBar = characterVisualCues.GetComponentInChildren<Slider>();
+    characterOverheadBubble = characterVisualCues.GetComponentInChildren<OverheadBubble>();
+    characterOverheadLabel = characterLabel.GetComponentInChildren<TextMesh>();
+    characterHealthBarWrapper = characterHealthBar.transform.parent.gameObject;
+
+    characterHealthBar.maxValue = maxHealth;
+    characterHealthBar.value = health;
+    characterOverheadLabel.text = characterName;
 
     hideVisualCues();
   }
 
   private void Update()
   {
-    characterHealthBar.GetComponentInChildren<Slider>().value = health;
+    characterHealthBar.value = health;
+  }
+
+  public void showHealthBar()
+  {
+    characterVisualCues.gameObject.SetActive(true);
+    characterOverheadBubble.gameObject.SetActive(false);
+    characterHealthBarWrapper.gameObject.SetActive(true);
+  }
+
+  public void showOverheadBubble()
+  {
+    characterVisualCues.gameObject.SetActive(true);
+    characterHealthBarWrapper.gameObject.SetActive(false);
+    characterOverheadBubble.gameObject.SetActive(true);
+  }
+
+  public void showOverheadLabel()
+  {
+    characterLabel.gameObject.SetActive(true);
+  }
+
+  public void hideHealthBar()
+  {
+    characterVisualCues.gameObject.SetActive(false);
+    characterHealthBarWrapper.gameObject.SetActive(false);
+  }
+
+  public void hideOverheadBubble()
+  {
+    characterVisualCues.gameObject.SetActive(false);
+    characterOverheadBubble.gameObject.SetActive(false);
+  }
+
+  public void hideOverheadLabel()
+  {
+    characterLabel.gameObject.SetActive(false);
   }
 
   private void hideVisualCues()
   {
-    // this hides the health bar and label for the character
-    // these will be visible when necesary
-    characterHealthBar.SetActive(false);
-    characterLabel.SetActive(false);
+    characterVisualCues.gameObject.SetActive(false);
+    characterHealthBarWrapper.gameObject.SetActive(false);
+    characterOverheadBubble.gameObject.SetActive(false);
+    characterLabel.gameObject.SetActive(false);
   }
 }

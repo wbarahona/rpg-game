@@ -19,6 +19,7 @@ public class Item : MonoBehaviour
     legs
   }
 
+  public int itemID = 0;
   public string itemName = "Default Name";
   public string itemDescription = "Default Description";
   public Sprite itemIcon;
