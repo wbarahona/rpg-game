@@ -39,6 +39,7 @@ public class CharacterStats : MonoBehaviour
   public bool canUseItem { get; private set; } = true;
   public Inventory inventory = new Inventory();
   // TODO: add a quest public variable here or what quest array the character is on
+  // TODO: add a moves list here or what moves the character has
   public Item weaponEquipped;
   public Item shieldEquipped;
   public Item armorHeadEquipped;

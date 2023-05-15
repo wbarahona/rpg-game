@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1606732855377934638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1476922421675538231, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_Name
+      value: Slash Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247669395416016228, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276571081004974071, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: attackTypeName
+      value: Slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276571081004974071, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: baseAttackPower
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276571081004974071, guid: 19116d782228241be879de06ca665052, type: 3}
+      propertyPath: attackTypeDescription
+      value: A slash attack made by a blunt weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19116d782228241be879de06ca665052, type: 3}

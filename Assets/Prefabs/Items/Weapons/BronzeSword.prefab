@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3904729464126219742
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040782, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495606062096040783, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300074, guid: 0bc4ed27aef38a44bb72e80f9beb5326, type: 3}
+    - target: {fileID: 1495606062096040784, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_Name
+      value: BronzeSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isWeapon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemIcon
+      value: 
+      objectReference: {fileID: 21300074, guid: 0bc4ed27aef38a44bb72e80f9beb5326, type: 3}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemName
+      value: Bronze Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemPower
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemWeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: spawnChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemBuyValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemDescription
+      value: Is a regular bronze sword, cheap but can do its job
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: craftingMaterialQuantity
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}

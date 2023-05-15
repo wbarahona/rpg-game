@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5256809560320850346
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialName
+      value: Bronze
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialDescription
+      value: A cheap bronze chip
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialStrengths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialWeaknesses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialStrengths.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialWeaknesses.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544842437755890167, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477792547285446639, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: m_Name
+      value: Bronze Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}

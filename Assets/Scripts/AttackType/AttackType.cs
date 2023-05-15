@@ -11,9 +11,25 @@ using UnityEngine;
 
 public class AttackType : MonoBehaviour
 {
+  public enum AttackTypeName
+  {
+    physical,
+    magical,
+    special
+  }
+  public enum AttackTypeEffect
+  {
+    slash,
+    fire,
+    ice,
+    plasma,
+  }
   public int attackTypeID = 0;
   public string attackTypeName = "Default Name";
   public string attackTypeDescription = "Default Description";
   public Sprite attackTypeIcon;
-  public string attackType = "Default Type";
+  public AttackTypeName attackType;
+  public AttackTypeEffect attackTypeEffect;
+  // TODO: this will have the attack effect animation prefab attached to it add it here
+  public int baseAttackPower = 1;
 }
