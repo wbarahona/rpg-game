@@ -5,13 +5,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [System.Serializable]
 
 public class CharacterStats : MonoBehaviour
 {
+  public enum CharacterClass
+  {
+    warrior,
+    mage,
+    rogue,
+    cleric,
+    merchant,
+    questGiver,
+    questReceiver,
+    enemy,
+    boss
+  }
   public string characterName = "Default Name";
   public string characterDescription = "Default Description";
-  public string characterClass = "Default Class";
+  public CharacterClass characterClass;
   public int health = 100;
   public int maxHealth { get; private set; } = 100;
   public int mana = 100;
@@ -20,23 +33,23 @@ public class CharacterStats : MonoBehaviour
   public int defense = 1;
   public int speed = 1;
   public int luck = 1;
-  public int level { get; private set; } = 1;
-  public int maxLevel { get; private set; } = 100;
-  public int experience { get; private set; } = 0;
-  public int experienceToNextLevel { get; private set; } = 100;
-  public bool isDead { get; private set; } = false;
-  public bool isActive { get; private set; } = true;
-  public bool isPlayer { get; private set; } = false;
-  public bool isNPC { get; private set; } = false;
-  public bool isEnemy { get; private set; } = false;
-  public bool isBoss { get; private set; } = false;
-  public bool isMerchant { get; private set; } = false;
-  public bool isQuestGiver { get; private set; } = false;
-  public bool isQuestReceiver { get; private set; } = false;
-  public bool canMove { get; private set; } = true;
-  public bool canAttack { get; private set; } = true;
-  public bool canUseMagic { get; private set; } = true;
-  public bool canUseItem { get; private set; } = true;
+  public int level = 1;
+  public int maxLevel = 100;
+  public int experience = 0;
+  public int experienceToNextLevel = 100;
+  public bool isDead = false;
+  public bool isActive = true;
+  public bool isPlayer = false;
+  public bool isNPC = false;
+  public bool isEnemy = false;
+  public bool isBoss = false;
+  public bool isMerchant = false;
+  public bool isQuestGiver = false;
+  public bool isQuestReceiver = false;
+  public bool canMove = true;
+  public bool canAttack = true;
+  public bool canUseMagic = true;
+  public bool canUseItem = true;
   public Inventory inventory = new Inventory();
   // TODO: add a quest public variable here or what quest array the character is on
   // TODO: add a moves list here or what moves the character has
@@ -45,4 +58,28 @@ public class CharacterStats : MonoBehaviour
   public Item armorHeadEquipped;
   public Item armorChestEquipped;
   public Item armorLegEquipped;
+  public GameObject characterHealthBar;
+  public GameObject characterLabel;
+
+  private void Start()
+  {
+    characterHealthBar.GetComponentInChildren<Slider>().maxValue = maxHealth;
+    characterHealthBar.GetComponentInChildren<Slider>().value = health;
+    characterLabel.GetComponentInChildren<TextMesh>().text = characterName;
+
+    hideVisualCues();
+  }
+
+  private void Update()
+  {
+    characterHealthBar.GetComponentInChildren<Slider>().value = health;
+  }
+
+  private void hideVisualCues()
+  {
+    // this hides the health bar and label for the character
+    // these will be visible when necesary
+    characterHealthBar.SetActive(false);
+    characterLabel.SetActive(false);
+  }
 }
