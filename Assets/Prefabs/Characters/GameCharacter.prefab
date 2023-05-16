@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 1335160899
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb8cc55af4b7a034584793949fd90500, type: 3}
+  m_Sprite: {fileID: 1285448753, guid: b21504132eefc4e4ba6158df5e98d22a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   characterType: 0
   characterStatus: 0
   characterMood: 0
-  characterIcon: {fileID: 21300000, guid: fb8cc55af4b7a034584793949fd90500, type: 3}
+  characterIcon: {fileID: 1285448753, guid: b21504132eefc4e4ba6158df5e98d22a, type: 3}
   health: 100
   maxHealth: 100
   mana: 100
