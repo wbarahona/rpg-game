@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1420bb076c9034853b396ef81d7256d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemID: 0
   itemName: Default Name
   itemDescription: Default Description
   itemIcon: {fileID: 0}
@@ -183,6 +184,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1625360418123959613}
     m_Modifications:
+    - target: {fileID: 8274437660041709858, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274437660041709858, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1968634255
+      objectReference: {fileID: 0}
     - target: {fileID: 8274437660041709859, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
       propertyPath: m_Name
       value: GameItemLabel

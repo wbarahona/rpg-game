@@ -107,4 +107,4 @@ MonoBehaviour:
   moveDelay: 3
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 21
+    m_Bits: 17

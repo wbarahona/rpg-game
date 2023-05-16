@@ -122,8 +122,8 @@ MonoBehaviour:
   materialStrengths: []
   materialWeaknesses: []
   spawnChance: 1
-  gameMaterialLabel: {fileID: 5994612328115258253}
   quantity: 1
+  gameMaterialLabel: {fileID: 5994612328115258253}
 --- !u!1001 &2442517873199565486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +131,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5544842437755890167}
     m_Modifications:
+    - target: {fileID: 8274437660041709858, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274437660041709858, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1968634255
+      objectReference: {fileID: 0}
     - target: {fileID: 8274437660041709859, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
       propertyPath: m_Name
       value: GameLabel

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 265461512692578217}
   - component: {fileID: 3464696227716855113}
   - component: {fileID: 596474727988774709}
+  - component: {fileID: 5350795102451890581}
   m_Layer: 0
   m_Name: GameCharacter
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265461512692578218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.009, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -181,8 +182,24 @@ MonoBehaviour:
   armorHeadEquipped: {fileID: 0}
   armorChestEquipped: {fileID: 0}
   armorLegEquipped: {fileID: 0}
+--- !u!114 &5350795102451890581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265461512692578218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b06b144dbc3444918b85cf8a8f1ff68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   characterVisualCues: {fileID: 6186364054224838922}
   characterLabel: {fileID: 589070687058892700}
+  characterHealthBarWrapper: {fileID: 687737506504097054}
+  characterHealthBar: {fileID: 1083032233363176460}
+  characterOverheadBubble: {fileID: 3418051294645260963}
+  emojiBubble: {fileID: 1144837992686500586}
 --- !u!1001 &1529410966243809602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,8 +287,54 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7147787092813707398, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147787092813707398, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1335160899
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
+--- !u!1 &687737506504097054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2067955653656126556, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
+  m_PrefabInstance: {fileID: 1529410966243809602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1083032233363176460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1891014006645482830, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
+  m_PrefabInstance: {fileID: 1529410966243809602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1144837992686500586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1935078055152165800, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
+  m_PrefabInstance: {fileID: 1529410966243809602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3418051294645260963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4203781091626683361, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
+  m_PrefabInstance: {fileID: 1529410966243809602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dfa1cf602114bf7af76160b11944d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6186364054224838922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4675843068205578312, guid: 6906b333e4d344b04a71faf751ffcbc8, type: 3}
@@ -289,6 +352,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 265461512692578215}
     m_Modifications:
+    - target: {fileID: 8274437660041709858, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274437660041709858, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1335160899
+      objectReference: {fileID: 0}
     - target: {fileID: 8274437660041709859, guid: 2693e5250d6094c6f8baf3584761781e, type: 3}
       propertyPath: m_Name
       value: GameLabel

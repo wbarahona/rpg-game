@@ -46,14 +46,14 @@ public class CharacterStats : MonoBehaviour
 
   public enum CharacterMood
   {
-    happy,
-    sad,
-    angry,
-    scared,
-    confused,
-    surprised,
-    disgusted,
-    neutral
+    happy = 0,
+    sad = 1,
+    angry = 2,
+    scared = 3,
+    confused = 4,
+    surprised = 5,
+    disgusted = 6,
+    neutral = 7
   }
   public int characterID = 0;
   public string characterName = "Default Name";
@@ -89,73 +89,19 @@ public class CharacterStats : MonoBehaviour
   public Item armorHeadEquipped;
   public Item armorChestEquipped;
   public Item armorLegEquipped;
-  public GameObject characterVisualCues;
-  public GameObject characterLabel;
-  private GameObject characterHealthBarWrapper;
-  private Slider characterHealthBar;
-  private TextMesh characterOverheadLabel;
-  private OverheadBubble characterOverheadBubble;
+  private CharacterUI characterUI;
 
   private void Start()
   {
-    characterHealthBar = characterVisualCues.GetComponentInChildren<Slider>();
-    characterOverheadBubble = characterVisualCues.GetComponentInChildren<OverheadBubble>();
-    characterOverheadLabel = characterLabel.GetComponentInChildren<TextMesh>();
-    characterHealthBarWrapper = characterHealthBar.transform.parent.gameObject;
+    characterUI = GetComponent<CharacterUI>();
 
-    characterHealthBar.maxValue = maxHealth;
-    characterHealthBar.value = health;
-    characterOverheadLabel.text = characterName;
-
-    hideVisualCues();
+    characterUI.initHealthBar(maxHealth, health);
+    characterUI.hideVisualCues();
   }
 
   private void Update()
   {
-    characterHealthBar.value = health;
-  }
-
-  public void showHealthBar()
-  {
-    characterVisualCues.gameObject.SetActive(true);
-    characterOverheadBubble.gameObject.SetActive(false);
-    characterHealthBarWrapper.gameObject.SetActive(true);
-  }
-
-  public void showOverheadBubble()
-  {
-    characterVisualCues.gameObject.SetActive(true);
-    characterHealthBarWrapper.gameObject.SetActive(false);
-    characterOverheadBubble.gameObject.SetActive(true);
-  }
-
-  public void showOverheadLabel()
-  {
-    characterLabel.gameObject.SetActive(true);
-  }
-
-  public void hideHealthBar()
-  {
-    characterVisualCues.gameObject.SetActive(false);
-    characterHealthBarWrapper.gameObject.SetActive(false);
-  }
-
-  public void hideOverheadBubble()
-  {
-    characterVisualCues.gameObject.SetActive(false);
-    characterOverheadBubble.gameObject.SetActive(false);
-  }
-
-  public void hideOverheadLabel()
-  {
-    characterLabel.gameObject.SetActive(false);
-  }
-
-  private void hideVisualCues()
-  {
-    characterVisualCues.gameObject.SetActive(false);
-    characterHealthBarWrapper.gameObject.SetActive(false);
-    characterOverheadBubble.gameObject.SetActive(false);
-    characterLabel.gameObject.SetActive(false);
+    characterUI.updateHealthBar(health);
+    characterUI.setEmojiBubble((int)characterMood);
   }
 }
