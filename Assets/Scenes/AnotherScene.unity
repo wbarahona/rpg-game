@@ -131,8 +131,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 400567953681314441, guid: d264bc081760b499c8b767008aa93658, type: 3}
-      propertyPath: areaToLoad
-      value: SampleScene
+      propertyPath: areaTransitionName
+      value: AnotherSceneExit1
       objectReference: {fileID: 0}
     - target: {fileID: 400567953681314444, guid: d264bc081760b499c8b767008aa93658, type: 3}
       propertyPath: m_Name

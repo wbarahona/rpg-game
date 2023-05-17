@@ -22459,6 +22459,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2038996292, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: transitionName
+      value: AnotherSceneExit1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038996293, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314441, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: areaToLoad
+      value: AnotherScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314441, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: areaTransitionName
+      value: SampleSceneExit1
+      objectReference: {fileID: 0}
     - target: {fileID: 400567953681314444, guid: d264bc081760b499c8b767008aa93658, type: 3}
       propertyPath: m_Name
       value: AreaExit
