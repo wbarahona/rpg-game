@@ -24,6 +24,7 @@ public class CharacterStats : MonoBehaviour
   {
     player,
     npc,
+    enemy,
     boss,
     merchant,
     questGiver,
