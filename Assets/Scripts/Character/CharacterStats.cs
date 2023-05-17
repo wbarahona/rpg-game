@@ -24,6 +24,7 @@ public class CharacterStats : MonoBehaviour
   {
     player,
     npc,
+    enemy,
     boss,
     merchant,
     questGiver,
@@ -103,5 +104,49 @@ public class CharacterStats : MonoBehaviour
   {
     characterUI.updateHealthBar(health);
     characterUI.setEmojiBubble((int)characterMood);
+  }
+
+  public void SetCharacterDead()
+  {
+    isDead = true;
+    health = 0;
+    characterUI.hideVisualCues();
+  }
+
+  public void SetCharacterAlive()
+  {
+    isDead = false;
+    health = 1;
+    characterUI.showHealthBar();
+  }
+
+  public void TakeDamage(int damage)
+  {
+    if (isDead)
+    {
+      return;
+    }
+
+    health -= damage;
+
+    if (health <= 0)
+    {
+      SetCharacterDead();
+    }
+  }
+
+  public void Heal(int healAmount)
+  {
+    if (isDead)
+    {
+      return;
+    }
+
+    health += healAmount;
+
+    if (health > maxHealth)
+    {
+      health = maxHealth;
+    }
   }
 }
