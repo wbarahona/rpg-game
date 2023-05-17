@@ -7,29 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 265461512692578214, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1285448753, guid: b21504132eefc4e4ba6158df5e98d22a, type: 3}
-    - target: {fileID: 265461512692578214, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 265461512692578214, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -950869721
-      objectReference: {fileID: 0}
     - target: {fileID: 265461512692578215, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 265461512692578215, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5382013
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 265461512692578215, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8340483
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 265461512692578215, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67,30 +55,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: characterID
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: characterIcon
-      value: 
-      objectReference: {fileID: 1285448753, guid: b21504132eefc4e4ba6158df5e98d22a, type: 3}
-    - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: characterName
-      value: Tim
-      objectReference: {fileID: 0}
-    - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: characterDescription
-      value: Is the hero of this story
-      objectReference: {fileID: 0}
-    - target: {fileID: 3464696227716855113, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: m_Radius
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3464696227716855113, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 5677627456975250063, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -106,7 +70,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 265461512692578218, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
   m_PrefabInstance: {fileID: 4812974208368768122}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &464311888
+--- !u!114 &374650761410104085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,9 +82,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8769ad97170452e9c0f4b0dfc80850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   rb: {fileID: 4711897003091280851}
   cam: {fileID: 0}
+--- !u!114 &2577005907743724637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711897003091280848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f46fdb0f4d684147a0ba531a965a861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4711897003091280851 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 265461512692578217, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}

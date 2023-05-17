@@ -1,3 +1,5 @@
+// this script allows the player to move
+// it is attached to the player prefab
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

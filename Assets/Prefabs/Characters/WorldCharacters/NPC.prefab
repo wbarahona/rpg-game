@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 265461512692578218, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: isNPC
       value: 1
