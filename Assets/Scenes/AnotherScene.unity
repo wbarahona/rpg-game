@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 1343349608}
   - component: {fileID: 1343349607}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23997,5 +23997,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6775945490432777457, guid: 9c709a5b53d1d470791bb4d3c9b73b69, type: 3}
+      propertyPath: theMap
+      value: 
+      objectReference: {fileID: 1343349608}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c709a5b53d1d470791bb4d3c9b73b69, type: 3}

@@ -28,6 +28,7 @@ public class CameraController : MonoBehaviour
     target = thePlayer.transform; // set the target to follow
     bottomLeftLimit = theMap.localBounds.min + new Vector3(halfWidth, halfHeight, 0f); // set the bottom left limit
     topRightLimit = theMap.localBounds.max + new Vector3(-halfWidth, -halfHeight, 0f); // set the top right limit
+    thePlayer.SetBounds(theMap.localBounds.min, theMap.localBounds.max); // set the bounds of the player
   }
 
   // LateUpdate is called after Update each frame (after all other updates)
