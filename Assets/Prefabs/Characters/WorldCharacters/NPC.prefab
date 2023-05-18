@@ -77,6 +77,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 912577754737851923, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464696227716855113, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464696227716855113, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5677627456975250063, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
@@ -92,7 +100,7 @@ PrefabInstance:
       value: VisualCues
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 912577754737851923, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
+    - {fileID: 3464696227716855113, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
 --- !u!1 &8224579480833832516 stripped
 GameObject:
