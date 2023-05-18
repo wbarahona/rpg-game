@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &218086093
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400567953681314441, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: areaToLoad
+      value: AnotherScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314441, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: areaTransitionName
+      value: SampleSceneExit2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314444, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_Name
+      value: AreaExit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.043578707
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400567953681314446, guid: d264bc081760b499c8b767008aa93658, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d264bc081760b499c8b767008aa93658, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -22461,7 +22526,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2038996292, guid: d264bc081760b499c8b767008aa93658, type: 3}
       propertyPath: transitionName
-      value: AnotherSceneExit1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2038996293, guid: d264bc081760b499c8b767008aa93658, type: 3}
       propertyPath: m_LocalPosition.x

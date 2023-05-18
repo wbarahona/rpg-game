@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa6e7604998e42d5bd941066c899e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionName: SampleSceneExit1
+  transitionName: 
 --- !u!1 &400567953681314444
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaToLoad: SampleScene
   areaTransitionName: 
+  theEntrance: {fileID: 2038996292}
