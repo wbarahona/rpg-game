@@ -17,8 +17,8 @@ public class CameraController : MonoBehaviour
   private float halfHeight; // the half height of the camera
   private float halfWidth; // the half width of the camera
 
-  // Awake is called before the first frame update
-  void Awake()
+  // Start is called before the first frame update
+  void Start()
   {
     thePlayer = FindObjectOfType<PlayerController>(); // find the player
 
