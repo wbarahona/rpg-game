@@ -1,0 +1,50 @@
+{
+  "initialIdentity": false,
+  "gameVersion": "0.0.1",
+  "gameTitle": "Default Game Title",
+  "gameDescription": "Default Game Description",
+  "gameAuthor": "Willmer Barahona",
+  "gameDate": "2023-01-01",
+  "emoji": "👾",
+  "gameStats": {
+    "player": {
+      "gamePlayTime": 0,
+      "gamePlayTimeFormatted": "00:00:00",
+      "inGameTime": 0,
+      "score": 0,
+      "stats": {
+        "characterID": 0,
+        "characterName": "Default Name",
+        "characterDescription": "Default Description",
+        "characterClass": "villager",
+        "characterType": "player",
+        "characterStatus": "normal",
+        "characterMood": "happy",
+        "health": 100,
+        "maxHealth": 100,
+        "mana": 100,
+        "maxMana": 100,
+        "strength": 1,
+        "defense": 1,
+        "speed": 1,
+        "luck": 1,
+        "level": 1,
+        "maxLevel": 100,
+        "experience": 0,
+        "experienceToNextLevel": 100,
+        "isDead": false,
+        "isActive": true,
+        "canMove": true,
+        "canAttack": true,
+        "canUseMagic": true,
+        "canUseItem": true,
+        "weaponEquippedId": "",
+        "shieldEquippedId": "",
+        "armorHeadEquipped": "",
+        "armorChestEquipped": "",
+        "armorLegEquipped": ""
+      },
+      "playerParty": []
+    }
+  }
+}
