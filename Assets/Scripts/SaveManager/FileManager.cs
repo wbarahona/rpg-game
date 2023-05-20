@@ -133,9 +133,9 @@ public class FileManager
         }
     }
 
-    public string FetchInitialData()
+    public string FetchDataFile(string folder, string fileName)
     {
-        string initialSaveDataPath = Path.Combine(Application.dataPath, "Data", "InitialSaveData.json");
+        string initialSaveDataPath = Path.Combine(Application.dataPath, folder, fileName);
 
         if (File.Exists(initialSaveDataPath))
         {
@@ -145,12 +145,12 @@ public class FileManager
             }
             catch (IOException e)
             {
-                Debug.LogError($"Error reading initial data file: {e.Message}");
+                Debug.LogError($"Error reading data file '{fileName}': {e.Message}");
             }
         }
         else
         {
-            Debug.LogError("Initial data file not found");
+            Debug.LogError($"{fileName} Data file not found");
         }
 
         return null;

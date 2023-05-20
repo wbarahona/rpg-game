@@ -32,11 +32,11 @@ public class SaveManager : MonoBehaviour
         
     }
 
-    private void LoadGameSave() {
+    public void LoadGameSave() {
         fileManager = new FileManager();
 
         // Fetch the initial data
-        string initialData = fileManager.FetchInitialData();
+        string initialData = fileManager.FetchDataFile("Data", "InitialSaveData.json");
         if (initialData != null)
         {
             // Use the initial data as needed
