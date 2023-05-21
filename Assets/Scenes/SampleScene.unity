@@ -23087,7 +23087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8224579480833832516, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPC_Jason
       objectReference: {fileID: 0}
     - target: {fileID: 8224579480833832520, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
       propertyPath: m_SortingLayer
@@ -23144,6 +23144,14 @@ PrefabInstance:
     - target: {fileID: 8776269077820851931, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
       propertyPath: health
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776269077820851931, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+      propertyPath: characterId
+      value: npc_jason
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776269077820851931, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+      propertyPath: characterName
+      value: Jason
       objectReference: {fileID: 0}
     - target: {fileID: 8776269077820851931, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
       propertyPath: characterType

@@ -75,6 +75,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
+      propertyPath: characterId
+      value: player_$playerName
+      objectReference: {fileID: 0}
+    - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
+      propertyPath: characterName
+      value: $playerName
+      objectReference: {fileID: 0}
     - target: {fileID: 687737506504097054, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: m_Layer
       value: 3

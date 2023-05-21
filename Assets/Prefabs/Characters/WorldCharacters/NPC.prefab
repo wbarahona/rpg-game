@@ -64,6 +64,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
+      propertyPath: characterId
+      value: npc_characterName
+      objectReference: {fileID: 0}
+    - target: {fileID: 596474727988774709, guid: fbb66b6b1271048199d8042c4a1f914b, type: 3}
       propertyPath: characterName
       value: NPC
       objectReference: {fileID: 0}
@@ -141,3 +145,20 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 25
+--- !u!114 &2796371231132417837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224579480833832516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1f4bcaba5fd49e58336e67afe4aeca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogText: {fileID: 0}
+  nameText: {fileID: 0}
+  dialogBox: {fileID: 0}
+  nameBox: {fileID: 0}
+  currentLine: 0

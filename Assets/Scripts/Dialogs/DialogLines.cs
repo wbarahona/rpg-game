@@ -6,4 +6,6 @@ public class DialogLines
 {
     public string text;
     public string name;
+    public DialogLineConditions[] dialogLineConditions;
+    public DialogLineMood mood;
 }

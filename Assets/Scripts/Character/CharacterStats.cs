@@ -56,7 +56,8 @@ public class CharacterStats : MonoBehaviour
     disgusted = 6,
     neutral = 7
   }
-  public int characterID = 0;
+  public string gameObjectId = "000000000000";
+  public string characterId = "characterType_characterName";
   public string characterName = "Default Name";
   public string characterDescription = "Default Description";
   public CharacterGameClass characterClass;
