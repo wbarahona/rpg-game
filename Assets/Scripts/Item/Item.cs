@@ -18,8 +18,8 @@ public class Item : MonoBehaviour
     chest,
     legs
   }
-
-  public int itemID = 0;
+  public string gameObjectId = "000000000000";
+  public string itemId = "itemClass_itemName";
   public string itemName = "Default Name";
   public string itemDescription = "Default Description";
   public Sprite itemIcon;

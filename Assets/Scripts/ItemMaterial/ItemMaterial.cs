@@ -12,7 +12,8 @@ using UnityEngine;
 
 public class ItemMaterial : MonoBehaviour
 {
-  public int materialID = 0;
+  public string gameObjectId = "000000000000";
+  public string materialId = "materialType_materialName";
   public string materialName = "Default Name";
   public string materialDescription = "Default Description";
   public Sprite materialIcon;
