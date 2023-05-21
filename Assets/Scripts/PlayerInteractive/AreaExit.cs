@@ -45,7 +45,7 @@ public class AreaExit : MonoBehaviour
       // SceneManager.LoadScene(areaToLoad);
       shouldLoadAfterFade = true;
       UIFade.instance.FadeToBlackScreen();
-      PlayerController.instance.areaTransitionName = areaTransitionName;
+      PlayerManager.instance.areaTransitionName = areaTransitionName;
     }
   }
 

@@ -10,9 +10,9 @@ public class AreaEntrance : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    if (transitionName == PlayerController.instance.areaTransitionName)
+    if (transitionName == PlayerManager.instance.areaTransitionName)
     {
-      PlayerController.instance.transform.position = transform.position;
+      PlayerManager.instance.transform.position = transform.position;
     }
     UIFade.instance.FadeFromBlackScreen();
   }

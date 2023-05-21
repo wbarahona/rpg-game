@@ -5,62 +5,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class CharacterDialogs
+  public Text nameText;
+  public GameObject dialogBox;
+  public GameObject nameBox;
+  public GameObject dialogTextContent;
+  public int currentLine = 0;
+  private TextMeshProUGUI dialogText;
+  private DialogLines[] dialogLines;
+
+  // Start is called before the first frame update
+  void Start()
+  {
+    dialogText = dialogTextContent.GetComponent<TextMeshProUGUI>();
+
+    ClearDialogWindow();
+    HideDialogWindow();
+  }
+
+  // Update is called once per frame
+  void Update()
+  {
+    if (dialogBox.activeInHierarchy && Input.GetButtonUp("Fire1"))
     {
-        public DialogLines[] dialogs;
+      currentLine++;
+      if (currentLine >= dialogLines.Length)
+      {
+        ClearDialogWindow();
+      }
+      else
+      {
+        ShowCurrentDialogLine(currentLine);
+      }
     }
+  }
 
-    public Text dialogText;
-    public Text nameText;
-    public GameObject dialogBox;
-    public GameObject nameBox;
-    public int currentLine;
-    private DialogLines[] dialogLines;
-    private CharacterStats characterStats;
-    private FileManager fileManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        characterStats = GetComponent<CharacterStats>();
-        LoadDialog($"{characterStats.characterId}.json");
-    }
+  public void ClearDialogWindow()
+  {
+    dialogText.text = "";
+    nameText.text = "";
+  }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // dialogText.text = dialogLines[currentLine].text;
-        // nameText.text = dialogLines[currentLine].name;
-    }
+  public void HideDialogWindow()
+  {
+    dialogBox.SetActive(false);
+    nameBox.SetActive(false);
+  }
 
-    public void ClearDialogWindow()
-    {
-        dialogText.text = "";
-        nameText.text = "";
-        dialogBox.SetActive(false);
-        nameBox.SetActive(false);
-    }
+  public void ShowDialogWindow()
+  {
+    dialogBox.SetActive(true);
+    nameBox.SetActive(true);
+  }
 
-    public void LoadDialog(string dialogFileName) {
-        fileManager = new FileManager();
-
-        // Fetch the initial data
-        string dialogLinesAsString = fileManager.FetchDataFile("Data/Dialogs/NPC", dialogFileName);
-        CharacterDialogs characterDialogs = JsonUtility.FromJson<CharacterDialogs>(dialogLinesAsString);
-        
-        if (dialogLinesAsString != null)
-        {
-            dialogLines = characterDialogs.dialogs;
-            // Process the JSON data
-            Debug.Log(PlaceHolderNameReplace(dialogLines[0].name)+": "+PlaceHolderNameReplace(dialogLines[0].text));
-        }
-    }
-
-    private string PlaceHolderNameReplace(string text)
-    {
-        return text.Replace("$characterName", characterStats.characterName);
-    }
+  public void ShowCurrentDialogLine(int currLine)
+  {
+    // dialogText.text = PlaceHolderNameReplace(dialogLines[currLine].text);
+    // nameText.text = PlaceHolderNameReplace(dialogLines[currLine].name);
+  }
 }

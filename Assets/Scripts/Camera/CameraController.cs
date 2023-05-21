@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
 {
   public Transform target; // the target to follow
   public Tilemap theMap; // the map
-  private PlayerController thePlayer; // the player
+  private PlayerManager thePlayer; // the player
   private Vector3 bottomLeftLimit; // the bottom left limit of the map
   private Vector3 topRightLimit; // the top right limit of the map
   private float halfHeight; // the half height of the camera
@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    thePlayer = FindObjectOfType<PlayerController>(); // find the player
+    thePlayer = FindObjectOfType<PlayerManager>(); // find the player
 
     halfHeight = Camera.main.orthographicSize; // get the half height of the camera
     halfWidth = halfHeight * Camera.main.aspect; // get the half width of the camera

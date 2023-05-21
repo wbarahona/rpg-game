@@ -1,18 +1,19 @@
 // this script handles the player character
-// as a controller it allows the player interact with the world
+// as a manager it allows the player interact with the world
 // it is attached to the player prefab
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
   // public variables
-  public static PlayerController instance; // the instance of the player controller
+  public static PlayerManager instance; // the instance of the player controller
   public string areaTransitionName; // the area transition name
   private Vector3 bottomLeftLimit; // the bottom left limit of the map
   private Vector3 topRightLimit; // the top right limit of the map
+  private FileManager fileManager; // the file manager
 
   // Start is called before the first frame update
   void Start()
