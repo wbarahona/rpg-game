@@ -14,7 +14,7 @@ public class PlayerLoader : MonoBehaviour
   void Start()
   {
     // if the player is not loaded
-    if (PlayerController.instance == null)
+    if (PlayerManager.instance == null)
     {
       // load the player from the prefab
       Instantiate(playerPrefab);

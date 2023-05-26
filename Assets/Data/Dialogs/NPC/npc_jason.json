@@ -1,0 +1,138 @@
+{
+  "dialogs": [
+    {
+      "name": "$characterName",
+      "text": "Oh! Hello there, I'm $characterName. What's your name?",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$playerName",
+      "text": "My name is $playerName",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$characterName",
+      "text": "Nice to meet you $playerName",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$playerName",
+      "text": "Nice to meet you too $characterName",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$characterName",
+      "text": "What do you do for a living?",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$playerName",
+      "text": "I'm a humble Farmer from the village of Esterbrook",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$characterName",
+      "text": "I see, I'm a humble Farmer too! But my farm is here at the castle fields",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$playerName",
+      "text": "Awesome! The castle fields are quite empty, Whats going on?",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 0,
+        "show": false
+      }
+    },
+    {
+      "name": "$characterName",
+      "text": "There has been attacks from robbers and thieves, many farmers like me are afraid to work here and fleeing to other villages",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 1,
+        "show": true
+      }
+    },
+    {
+      "name": "$characterName",
+      "text": "I'm afraid that soon the castle will be without food, we can only hope that the someone will do something about it...",
+      "dialogLineConditions": [],
+      "mood": {
+        "value": 1,
+        "show": true
+      }
+    },
+    {
+      "name": "$characterName",
+      "text": "Hey! You got a sword! You can help us! Please, help us!",
+      "dialogLineConditions": [
+        {
+          "conditionType": "questStarted",
+          "conditionName": "quests_quest01",
+          "conditionValue": 0,
+          "operatorType": "equals"
+        },
+        {
+          "conditionType": "questCompleted",
+          "conditionName": "quests_quest01",
+          "conditionValue": 3,
+          "operatorType": "equals"
+        },
+        {
+          "conditionType": "playerHasItem",
+          "conditionName": "items_item01",
+          "conditionValue": 1,
+          "operatorType": "equals"
+        }
+      ],
+      "mood": {
+        "value": 5,
+        "show": true
+      }
+    },
+    {
+      "name": "$characterName",
+      "text": "Hey! You are hurt pretty bad! You must find the local trader! You can find him in the Castle village, he can sell you some cheap potions!",
+      "dialogLineConditions": [
+        {
+          "conditionType": "playerStatValue",
+          "conditionName": "health",
+          "conditionValue": 10,
+          "operatorType": "greaterThan"
+        }
+      ],
+      "mood": {
+        "value": 3,
+        "show": true
+      }
+    }
+  ]
+}

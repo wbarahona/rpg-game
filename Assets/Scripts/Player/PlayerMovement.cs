@@ -12,23 +12,33 @@ public class PlayerMovement : MonoBehaviour
   Vector2 movement;
 
   private CharacterAnimations characterAnimations;
+  private CharacterStats playerStats;
   // Start is called before the first frame update
   void Start()
   {
+    playerStats = GetComponent<CharacterStats>();
     characterAnimations = GetComponent<CharacterAnimations>();
   }
 
   // Update is called once per frame
   void Update()
   {
-    float x = Input.GetAxisRaw("Horizontal");
-    float y = Input.GetAxisRaw("Vertical");
 
-    movement.x = x;
-    movement.y = y;
+    if (playerStats.canMove)
+    {
+      movement.x = Input.GetAxisRaw("Horizontal");
+      movement.y = Input.GetAxisRaw("Vertical");
 
-    characterAnimations.x = movement.x;
-    characterAnimations.y = movement.y;
+      characterAnimations.x = movement.x;
+      characterAnimations.y = movement.y;
+    }
+    else
+    {
+      movement.x = 0;
+      movement.y = 0;
+      characterAnimations.x = 0;
+      characterAnimations.y = 0;
+    }
   }
 
   void FixedUpdate()

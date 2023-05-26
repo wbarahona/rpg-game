@@ -4,74 +4,125 @@ using UnityEngine;
 
 public class AIMovement : MonoBehaviour
 {
-  public float speed = 3.5f;
-  public float avoidDistance = 1f;
-  public float moveDelay = 3f; // Delay between movements in seconds
-  public LayerMask obstacleLayer;
-  private Rigidbody2D rb;
+  public float moveSpeed = 3f; // The movement speed of the NPC
+  public float idleTime = 2f; // Time to idle between movements
+  public float detectionDistance = 1f; // Distance to detect solid objects
+  public float moveTime = 3f; // Time to move in a chosen direction
+  private CharacterStats characterStats; // Reference to the CharacterStats script
+  private Transform playerTransform; // Reference to the player's transform
   private CharacterAnimations characterAnimations;
-  Vector2 direction;
 
-  void Start()
+  private Rigidbody2D rb;
+  private Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
+  private Vector2 currentDirection;
+  private float idleTimer;
+  private float moveTimer;
+  private bool isSpeaking;
+
+  private void Awake()
   {
-    characterAnimations = GetComponent<CharacterAnimations>();
     rb = GetComponent<Rigidbody2D>();
-    StartCoroutine(MoveRandomly());
   }
 
-  IEnumerator MoveRandomly()
+  private void Start()
   {
-    while (true)
+    characterStats = GetComponent<CharacterStats>();
+    playerTransform = PlayerManager.instance.transform;
+    characterAnimations = GetComponent<CharacterAnimations>();
+    isSpeaking = characterStats.isSpeaking;
+  }
+
+  private void Update()
+  {
+    if (characterStats.isDead || !characterStats.isActive || !characterStats.canMove)
     {
-      characterAnimations.x = 0;
-      characterAnimations.y = 0;
+      return;
+    }
 
-      yield return new WaitForSeconds(moveDelay);
-      direction = GetRandomDirection();
-      // TODO: why is it that the character is facing the wrong way when moving left or down? I had to add the * -1 to fix it
-      characterAnimations.x = direction.x * -1;
-      characterAnimations.y = direction.y * -1;
-      rb.velocity = direction * speed;
-
-      if (CheckForObstacles())
+    if (isSpeaking != characterStats.isSpeaking)
+    {
+      isSpeaking = characterStats.isSpeaking;
+      if (isSpeaking)
       {
-        rb.velocity = -direction * speed;
+        TurnTowardsPlayer();
+      }
+    }
+
+    if (!isSpeaking)
+    {
+      if (idleTimer > 0f)
+      {
+        ResetNPCAnimations();
+        idleTimer -= Time.deltaTime;
+        return;
       }
 
-      yield return new WaitForSeconds(.62f);
+      if (moveTimer > 0f)
+      {
+        moveTimer -= Time.deltaTime;
+        Move(currentDirection);
+      }
+      else
+      {
+        if (currentDirection == Vector2.zero || IsBlocked())
+        {
+          currentDirection = GetRandomDirection();
+        }
+
+        moveTimer = moveTime;
+        idleTimer = idleTime;
+      }
     }
+  }
+
+  private bool IsBlocked()
+  {
+    RaycastHit2D hit = Physics2D.Raycast(transform.position, currentDirection, detectionDistance);
+    return hit.collider != null;
   }
 
   private Vector2 GetRandomDirection()
   {
-    int randomInt = Random.Range(0, 4);
-    switch (randomInt)
-    {
-      case 0:
-        return Vector2.up;
-      case 1:
-        return Vector2.down;
-      case 2:
-        return Vector2.left;
-      default:
-        return Vector2.right;
-    }
+    return directions[Random.Range(0, directions.Length)];
   }
 
-  private bool CheckForObstacles()
+  private void Move(Vector2 direction)
   {
-    RaycastHit2D hitUp = Physics2D.Raycast(transform.position, Vector2.up, avoidDistance, obstacleLayer);
-    RaycastHit2D hitDown = Physics2D.Raycast(transform.position, Vector2.down, avoidDistance, obstacleLayer);
-    RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector2.left, avoidDistance, obstacleLayer);
-    RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector2.right, avoidDistance, obstacleLayer);
+    ResetNPCAnimations();
+    rb.velocity = direction * moveSpeed;
+    characterAnimations.x = direction.x;
+    characterAnimations.y = direction.y;
+  }
 
-    if (hitUp.collider != null || hitDown.collider != null || hitLeft.collider != null || hitRight.collider != null)
+  private void TurnTowardsPlayer()
+  {
+    ResetNPCAnimations();
+    Vector2 directionToPlayer = playerTransform.position - transform.position;
+    float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+    angle += 180f;
+
+    float vectorValue = 1f;
+    Vector2[] animatorValues = new Vector2[]
     {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
+        new Vector2(-vectorValue, 0f),  // Left
+        new Vector2(0f, -vectorValue),  // Down
+        new Vector2(vectorValue, 0f),    // Right
+        new Vector2(0f, vectorValue)   // Up
+    };
+
+    int index = Mathf.FloorToInt((angle + 45f) / 90f) % 4;
+    Vector2 selectedValue = animatorValues[index];
+
+    currentDirection = selectedValue;
+
+    characterAnimations.lastMoveX = currentDirection.x;
+    characterAnimations.lastMoveY = currentDirection.y;
+  }
+
+  private void ResetNPCAnimations()
+  {
+    characterAnimations.x = 0;
+    characterAnimations.y = 0;
   }
 }
+

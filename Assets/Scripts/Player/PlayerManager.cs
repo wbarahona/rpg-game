@@ -1,18 +1,20 @@
 // this script handles the player character
-// as a controller it allows the player interact with the world
+// as a manager it allows the player interact with the world
 // it is attached to the player prefab
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
   // public variables
-  public static PlayerController instance; // the instance of the player controller
+  public static PlayerManager instance; // the instance of the player controller
   public string areaTransitionName; // the area transition name
   private Vector3 bottomLeftLimit; // the bottom left limit of the map
   private Vector3 topRightLimit; // the top right limit of the map
+  private FileManager fileManager; // the file manager
+  private CharacterStats characterStats; // Player character stats
 
   // Start is called before the first frame update
   void Start()
@@ -29,6 +31,11 @@ public class PlayerController : MonoBehaviour
       Destroy(gameObject);
     }
     DontDestroyOnLoad(gameObject);
+
+    // TODO: the player name must come from a GameManager state variable, that is set when the player is created in the character creation screen
+    characterStats = GetComponent<CharacterStats>();
+    characterStats.characterId = "player_Tim";
+    characterStats.characterName = "Tim";
   }
 
   // Update is called once per frame
@@ -47,5 +54,15 @@ public class PlayerController : MonoBehaviour
     float offsetY = 1f;
     bottomLeftLimit = botLeft + new Vector3(offsetX, offsetY, 0f); // set the bottom left limit
     topRightLimit = topRight + new Vector3(-offsetX, -offsetY, 0f); // set the top right limit
+  }
+
+  public CharacterStats GetStats()
+  {
+    return characterStats;
+  }
+
+  public void SetStat(CharacterStats.StatType statType, int value)
+  {
+    characterStats.SetStat(statType, value);
   }
 }
