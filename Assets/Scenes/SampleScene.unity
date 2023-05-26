@@ -23069,6 +23069,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626228543, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+      propertyPath: waitTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626228543, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1565698325648290389, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -23100,6 +23108,18 @@ PrefabInstance:
     - target: {fileID: 8224579480833832516, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
       propertyPath: m_Name
       value: NPC_Jason
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224579480833832519, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224579480833832519, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1534946daacb045ca8a71a6fc92591d5, type: 2}
+    - target: {fileID: 8224579480833832519, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8224579480833832520, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
       propertyPath: m_SortingLayer

@@ -7,6 +7,8 @@ public class CharacterAnimations : MonoBehaviour
 {
   public float x;
   public float y;
+  public float lastMoveX;
+  public float lastMoveY;
   public Animator animator;
   Vector2 movement;
   private float lastX;
@@ -22,6 +24,13 @@ public class CharacterAnimations : MonoBehaviour
     {
       lastX = x;
       lastY = y;
+      lastMoveX = 0;
+      lastMoveY = 0;
+    }
+    if (lastMoveX == 1 || lastMoveX == -1 || lastMoveY == 1 || lastMoveY == -1)
+    {
+      lastX = lastMoveX;
+      lastY = lastMoveY;
     }
 
     animator.SetFloat("moveX", movement.x);

@@ -145,7 +145,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.3
 --- !u!114 &596474727988774709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0195a0141830b460f8295d0c7e9d76c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterID: -1
+  gameObjectId: 000000000000
+  characterId: characterType_characterName
   characterName: Tim
   characterDescription: Is the hero of this story
   characterClass: 0

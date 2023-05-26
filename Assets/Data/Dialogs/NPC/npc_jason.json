@@ -2,7 +2,7 @@
   "dialogs": [
     {
       "name": "$characterName",
-      "text": "Hello, I'm $characterName. What's your name?",
+      "text": "Oh! Hello there, I'm $characterName. What's your name?",
       "dialogLineConditions": [],
       "mood": {
         "value": 0,
@@ -28,7 +28,7 @@
       }
     },
     {
-      "name":"$playerName",
+      "name": "$playerName",
       "text": "Nice to meet you too $characterName",
       "dialogLineConditions": [],
       "mood": {
@@ -82,7 +82,7 @@
       }
     },
     {
-      "name":"$characterName",
+      "name": "$characterName",
       "text": "I'm afraid that soon the castle will be without food, we can only hope that the someone will do something about it...",
       "dialogLineConditions": [],
       "mood": {

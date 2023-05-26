@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
   private Vector3 bottomLeftLimit; // the bottom left limit of the map
   private Vector3 topRightLimit; // the top right limit of the map
   private FileManager fileManager; // the file manager
+  private CharacterStats characterStats; // Player character stats
 
   // Start is called before the first frame update
   void Start()
@@ -30,6 +31,11 @@ public class PlayerManager : MonoBehaviour
       Destroy(gameObject);
     }
     DontDestroyOnLoad(gameObject);
+
+    // TODO: the player name must come from a GameManager state variable, that is set when the player is created in the character creation screen
+    characterStats = GetComponent<CharacterStats>();
+    characterStats.characterId = "player_Tim";
+    characterStats.characterName = "Tim";
   }
 
   // Update is called once per frame
@@ -48,5 +54,15 @@ public class PlayerManager : MonoBehaviour
     float offsetY = 1f;
     bottomLeftLimit = botLeft + new Vector3(offsetX, offsetY, 0f); // set the bottom left limit
     topRightLimit = topRight + new Vector3(-offsetX, -offsetY, 0f); // set the top right limit
+  }
+
+  public CharacterStats GetStats()
+  {
+    return characterStats;
+  }
+
+  public void SetStat(CharacterStats.StatType statType, int value)
+  {
+    characterStats.SetStat(statType, value);
   }
 }
