@@ -115,14 +115,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393eccc9a588f44d9ba416ba72e7c190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialID: 0
+  gameObjectId: 000000000000
+  materialId: materialType_materialName
   materialName: Default Name
   materialDescription: Default Description
   materialIcon: {fileID: -641368185, guid: 0bc4ed27aef38a44bb72e80f9beb5326, type: 3}
   materialStrengths: []
   materialWeaknesses: []
+  isSellable: 0
+  isBuyable: 0
   spawnChance: 1
   quantity: 1
+  materialBaseValue: 1
+  materialBuyValue: 0
+  materialSellValue: 0
+  materialWeight: 1
+  materialRarity: 1
   gameMaterialLabel: {fileID: 5994612328115258253}
 --- !u!1001 &2442517873199565486
 PrefabInstance:

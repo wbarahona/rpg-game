@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3970189999532907857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1495606062096040783, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2008921020, guid: 851cc3e90c18c4e938639aff24801415, type: 3}
+    - target: {fileID: 1495606062096040784, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_Name
+      value: BottledFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625360418123959613, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemId
+      value: elemental_bottledFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemName
+      value: Bottled Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemClass
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isSellable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemRarity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemWeight
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isElemental
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: spawnChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isPickupable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemBuyValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isEquippeable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemSellValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemDescription
+      value: You have found a mistic fire, use this elemental item to give fire effect
+        to an object in your inventory that allows elemental upgrade
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}

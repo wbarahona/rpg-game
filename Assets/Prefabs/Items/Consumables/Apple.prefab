@@ -56,6 +56,10 @@ PrefabInstance:
       value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemId
+      value: consumable_apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemIcon
       value: 
       objectReference: {fileID: 1763058345, guid: 0bc4ed27aef38a44bb72e80f9beb5326, type: 3}
@@ -64,20 +68,56 @@ PrefabInstance:
       value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isBuyable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemPower
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
-      propertyPath: spawnChance
+      propertyPath: isSellable
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemWeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: spawnChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isPickupable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemBuyValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemSellValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemDescription
-      value: An apple, adds +5 health
+      value: A juicy red apple, adds +5 health
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: craftingMaterialQuantity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemCraftingList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemUpgradeType.elementType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
