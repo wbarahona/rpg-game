@@ -39,7 +39,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1495606062096040783
@@ -159,22 +159,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1420bb076c9034853b396ef81d7256d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 0
+  gameObjectId: 000000000000
+  itemId: itemClass_itemName
   itemName: Default Name
   itemDescription: Default Description
   itemIcon: {fileID: 0}
   itemPower: 1
-  itemMaterial: {fileID: 0}
-  craftingMaterialQuantity: 1
-  statName: 0
-  isWeapon: 0
-  isShield: 0
-  isArmor: 0
+  itemCraftingList: []
+  itemDeconstructionList: []
+  statEffectName: 0
+  itemClass: 3
   armorPiece: 0
   isEquipped: 0
   itemQuantity: 1
   itemWeight: 1
-  itemBuyValue: 1
+  itemSellValue: 1
   spawnChance: 1
   gameItemLabel: {fileID: 4171676620148512955}
 --- !u!1001 &5417954591560405400

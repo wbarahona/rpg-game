@@ -60,6 +60,10 @@ PrefabInstance:
       value: BronzeSword
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemId
+      value: weapon_bronzeSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: isWeapon
       value: 1
       objectReference: {fileID: 0}
@@ -72,31 +76,103 @@ PrefabInstance:
       value: Bronze Sword
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isBuyable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemClass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemPower
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isSellable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemRarity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemWeight
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isCraftable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: spawnChance
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isPickupable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemBuyValue
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemMaterial
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: isEquippeable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemBaseValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemSellValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemAttackType
+      value: 
+      objectReference: {fileID: 6878798137690310361, guid: a3da19a5ee91a4d449340971d08e4fbe, type: 3}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemDescription
-      value: Is a regular bronze sword, cheap but can do its job
+      value: Is a regular bronze sword, cheap but can do its job, it deals +3 damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemUpgradeType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: craftingMaterialQuantity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemCraftingList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemUpgradeType.elementType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemDeconstructionList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemCraftingList.Array.data[0].material
+      value: 
+      objectReference: {fileID: 5368491069353805989, guid: ebf2098dfa5ce45b08393d87ce341c9a, type: 3}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemCraftingList.Array.data[0].quantity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemDeconstructionList.Array.data[0].material
+      value: 
+      objectReference: {fileID: 5368491069353805989, guid: ebf2098dfa5ce45b08393d87ce341c9a, type: 3}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemDeconstructionList.Array.data[0].quantity
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

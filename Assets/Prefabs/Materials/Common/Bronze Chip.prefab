@@ -8,12 +8,45 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: isBuyable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: isSellable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialId
+      value: material_materialName
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
       propertyPath: materialName
       value: Bronze
       objectReference: {fileID: 0}
     - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialWeight
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialBuyValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialBaseValue
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
+      propertyPath: materialSellValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
       propertyPath: materialDescription
-      value: A cheap bronze chip
+      value: A cheap bronze chip molten from extracted iron and copper ores, worth
+        .25g
       objectReference: {fileID: 0}
     - target: {fileID: 176562181523763471, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
       propertyPath: materialStrengths.Array.size
@@ -77,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477792547285446639, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
       propertyPath: m_Name
-      value: Bronze Variant
+      value: Bronze Chip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02e756efe47144a26bf37463b7adcd94, type: 3}
