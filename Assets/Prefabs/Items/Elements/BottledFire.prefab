@@ -104,6 +104,10 @@ PrefabInstance:
       value: elemental_bottledFire
       objectReference: {fileID: 0}
     - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
+      propertyPath: itemIcon
+      value: 
+      objectReference: {fileID: -2008921020, guid: 851cc3e90c18c4e938639aff24801415, type: 3}
+    - target: {fileID: 1784673454386400703, guid: ee6c6fc169c554d71b6beae58a786e44, type: 3}
       propertyPath: itemName
       value: Bottled Fire
       objectReference: {fileID: 0}

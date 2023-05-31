@@ -55,6 +55,7 @@ public class Item : MonoBehaviour
   public Stats.StatsType statEffectName;
   public ItemClass itemClass;
   public ArmorPiece armorPiece;
+  public bool isUpgradeable = false;
   public bool isSellable = false;
   public bool isBuyable = false;
   public bool isPickupable = false;
