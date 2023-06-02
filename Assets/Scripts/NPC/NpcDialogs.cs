@@ -10,13 +10,13 @@ public class NpcDialogs : MonoBehaviour
   [System.Serializable]
   public class CharacterDialogs
   {
-    public DialogLines[] dialogs;
+    public List<DialogLines> dialogs;
   }
 
   public static NpcDialogs instance;
 
   private FileManager fileManager;
-  private DialogLines[] npcDialogLines = new DialogLines[0];
+  private List<DialogLines> npcDialogLines = new List<DialogLines>();
   private CharacterStats npcStats;
   private string characterId;
   private bool canActivateDialog = false;
@@ -68,7 +68,7 @@ public class NpcDialogs : MonoBehaviour
   private void ReplacePlaceHolders()
   {
     string playerName = PlayerManager.instance.GetStats().characterName;
-    int length = npcDialogLines.Length;
+    int length = npcDialogLines.Count;
 
     for (int i = 0; i < length; ++i)
     {

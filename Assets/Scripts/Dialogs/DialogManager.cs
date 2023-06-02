@@ -16,7 +16,7 @@ public class DialogManager : MonoBehaviour
   public GameObject dialogTextContent;
   public int currentLine = 0;
   private TextMeshProUGUI dialogText;
-  private DialogLines[] dialogLines;
+  private List<DialogLines> dialogLines;
 
   // Start is called before the first frame update
   void Start()
@@ -42,15 +42,16 @@ public class DialogManager : MonoBehaviour
   {
     if (dialogBox.activeInHierarchy && Input.GetButtonUp("Fire1"))
     {
-      currentLine++;
-      if (currentLine >= dialogLines.Length)
+      if (currentLine >= dialogLines.Count)
       {
         ClearDialogWindow();
         HideDialogWindow();
+        NpcDialogs.instance.StartMovement();
       }
       else
       {
         ShowCurrentDialogLine(currentLine);
+        currentLine++;
       }
     }
   }
@@ -65,8 +66,6 @@ public class DialogManager : MonoBehaviour
   public void HideDialogWindow()
   {
     dialogBox.SetActive(false);
-    nameBox.SetActive(false);
-    NpcDialogs.instance.StartMovement();
   }
 
   public void ShowDialogWindow()
@@ -81,14 +80,30 @@ public class DialogManager : MonoBehaviour
     nameText.text = dialogLines[currLine].name;
   }
 
-  public void SetDialogLines(DialogLines[] dialogLines)
+  public void SetDialogLines(List<DialogLines> dialogLines)
   {
     this.dialogLines = dialogLines;
   }
 
+  public void SetSimpleMessage(string message)
+  {
+    List<DialogLines> dialogLines = new List<DialogLines>();
+    DialogLines dialogLine = new DialogLines();
+    dialogLine.name = "";
+    dialogLine.text = message;
+    dialogLines.Add(dialogLine);
+
+    SetDialogLines(dialogLines);
+    nameBox.SetActive(false);
+    dialogBox.SetActive(true);
+  }
+
   public void StartDialog()
   {
-    ShowDialogWindow();
-    ShowCurrentDialogLine(currentLine);
+    if (currentLine <= 0)
+    {
+      ShowDialogWindow();
+      return;
+    }
   }
 }

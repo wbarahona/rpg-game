@@ -636,11 +636,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2509874038908249981, guid: 03110b66ae8514c19b9b891594e75777, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 99.99999
+      value: 99.99913
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018925827845701859, guid: 03110b66ae8514c19b9b891594e75777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287138479013282493, guid: 03110b66ae8514c19b9b891594e75777, type: 3}
       propertyPath: m_Name
       value: ScrollableDialogText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287138479013282493, guid: 03110b66ae8514c19b9b891594e75777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4940701954328358037, guid: 03110b66ae8514c19b9b891594e75777, type: 3}
       propertyPath: m_Size
@@ -648,7 +656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4940701954328358037, guid: 03110b66ae8514c19b9b891594e75777, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 1.0000007
       objectReference: {fileID: 0}
     - target: {fileID: 5294073649529299274, guid: 03110b66ae8514c19b9b891594e75777, type: 3}
       propertyPath: m_fontSize
