@@ -33,7 +33,6 @@ public class NpcDialogs : MonoBehaviour
     {
       Destroy(gameObject);
     }
-    DontDestroyOnLoad(gameObject);
 
     fileManager = new FileManager();
     npcStats = GetComponent<CharacterStats>();
