@@ -8,7 +8,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractiveObject : MonoBehaviour {
+public class InteractiveObject : MonoBehaviour
+{
   // public variables
   public string gameObjectId = "000000000000";
   public string characterId = "objectClass_objectName";
@@ -22,12 +23,15 @@ public class InteractiveObject : MonoBehaviour {
   public bool canActivateMessage = false; // can activate message
   public string messageToDisplay; // the message to display
   public Sprite objectDefaultSprite; // the default sprite
-  private void Start() {
-    
+  private void Start()
+  {
+
   }
 
-  private void Update() {
-    if (canActivateMessage && Input.GetButtonUp("Fire1")) {
+  private void Update()
+  {
+    if (canActivateMessage && Input.GetButtonUp("Fire1"))
+    {
       hasBeenInteracted = true;
       // display the message
       DialogManager.instance.SetSimpleMessage(messageToDisplay);
@@ -35,24 +39,30 @@ public class InteractiveObject : MonoBehaviour {
   }
 
   // this method is called when the player enters the trigger
-  private void OnTriggerEnter2D(Collider2D other) {
+  private void OnTriggerEnter2D(Collider2D other)
+  {
     // if the other object is the player
     if (other.CompareTag("Player"))
     {
       playerIsInRange = true;
-      if (isInteractable && canDisplayMessage) {
+      playerIsOutRange = false;
+      if (isInteractable && canDisplayMessage)
+      {
         canActivateMessage = true;
       }
     }
   }
 
   // this method is called when the player exits the trigger
-  private void OnTriggerExit2D(Collider2D other) {
+  private void OnTriggerExit2D(Collider2D other)
+  {
     // if the other object is the player
     if (other.CompareTag("Player"))
     {
       playerIsInRange = false;
-      if (isInteractable && canDisplayMessage) {
+      playerIsOutRange = true;
+      if (isInteractable && canDisplayMessage)
+      {
         canActivateMessage = false;
       }
     }
