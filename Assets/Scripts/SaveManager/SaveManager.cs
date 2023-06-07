@@ -7,6 +7,7 @@ public class SaveManager : MonoBehaviour
   public static SaveManager instance; // the instance of the save manager
   private FileManager fileManager; // the file manager
   private const string FileName = "data.json";
+  private WorldObjectManager worldObjectManager = new WorldObjectManager(); // the world object manager
 
   // Start is called before the first frame update
   void Start()
@@ -32,40 +33,29 @@ public class SaveManager : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.L))
     {
       SaveData s = new SaveData();
+      WorldObjectPersist[] worldObjects = FindObjectsOfType<WorldObjectPersist>();
+      SavePlayerStats playerStats = worldObjectManager.GetPlayerData(worldObjects);
 
-      s.worldObjects = GetWorldObjectDataList();
+      s.worldObjects = worldObjectManager.GetWorldObjectDataList(worldObjects);
+      s.gameStats.player.playerPositionX = playerStats.playerPositionX;
+      s.gameStats.player.playerPositionY = playerStats.playerPositionY;
       SaveGame(s);
     }
   }
 
-  public List<SaveWorldObject> GetWorldObjectDataList()
+  private void SetWorldObjectDataList(List<SaveWorldObject> saveWorldObjects)
   {
     WorldObjectPersist[] worldObjects = FindObjectsOfType<WorldObjectPersist>();
-    List<SaveWorldObject> saveWorldObjects = new List<SaveWorldObject>();
-
-    foreach (WorldObjectPersist worldObject in worldObjects)
+    foreach (SaveWorldObject saveWorldObject in saveWorldObjects)
     {
-      WorldObjectPersist.WorldObjectData worldObjectData = worldObject.GetWorldObjectData();
-
-      int instanceID = worldObjectData.worldObjectId;
-      string name = worldObjectData.worldObjectName;
-      float positionX = worldObjectData.worldObjectPositionX;
-      float positionY = worldObjectData.worldObjectPositionY;
-      float positionZ = worldObjectData.worldObjectPositionZ;
-      bool isPlayer = worldObjectData.isPlayer;
-      bool isInteractable = worldObjectData.isInteractable;
-      bool hasBeenInteracted = worldObjectData.hasBeenInteracted;
-      bool playerIsInRange = worldObjectData.playerIsInRange;
-      bool playerIsOutRange = worldObjectData.playerIsOutRange;
-      bool canDisplayMessage = worldObjectData.canDisplayMessage;
-      bool canActivateMessage = worldObjectData.canActivateMessage;
-
-      // Use the instanceID as needed
-      Debug.Log("Instance ID: " + worldObjectData.worldObjectPositionX);
-      saveWorldObjects.Add(new SaveWorldObject(instanceID, name, positionX, positionY, positionZ, isPlayer, isInteractable, hasBeenInteracted, playerIsInRange, playerIsOutRange, canDisplayMessage, canActivateMessage));
+      foreach (WorldObjectPersist worldObject in worldObjects)
+      {
+        if (saveWorldObject.worldObjectId == worldObject.GetWorldObjectId())
+        {
+          worldObject.SetWorldObjectData(saveWorldObject);
+        }
+      }
     }
-
-    return saveWorldObjects;
   }
 
   public void LoadGameSave()
@@ -95,7 +85,7 @@ public class SaveManager : MonoBehaviour
       // Process the JSON data
       SaveData saveData = JsonUtility.FromJson<SaveData>(jsonContent);
 
-      Debug.Log("Player name: " + saveData.gameStats.player.stats.characterName);
+      SetWorldObjectDataList(saveData.worldObjects);
     }
   }
 

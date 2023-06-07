@@ -79,4 +79,22 @@ public class WorldObjectPersist : MonoBehaviour
 
     return worldObjectData;
   }
+
+  public void SetWorldObjectData(SaveWorldObject worldObjectData)
+  {
+    InteractiveObject interactiveObject = GetComponent<InteractiveObject>();
+
+    transform.position = new Vector3(worldObjectData.worldObjectPositionX, worldObjectData.worldObjectPositionY, worldObjectData.worldObjectPositionZ);
+
+    if (interactiveObject != null)
+    {
+      // is interactive object, set the properties
+      interactiveObject.isInteractable = worldObjectData.isInteractable;
+      interactiveObject.hasBeenInteracted = worldObjectData.hasBeenInteracted;
+      interactiveObject.playerIsInRange = worldObjectData.playerIsInRange;
+      interactiveObject.playerIsOutRange = worldObjectData.playerIsOutRange;
+      interactiveObject.canDisplayMessage = worldObjectData.canDisplayMessage;
+      interactiveObject.canActivateMessage = worldObjectData.canActivateMessage;
+    }
+  }
 }

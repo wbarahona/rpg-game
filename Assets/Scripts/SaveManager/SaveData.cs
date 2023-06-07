@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
-// add save prefix and rename each serialized class
+
 [Serializable]
 public class SaveData
 {
@@ -14,12 +14,23 @@ public class SaveData
   public string emoji;
   public SaveGameStats gameStats;
   public List<SaveWorldObject> worldObjects;
+
+  public SaveData()
+  {
+    gameStats = new SaveGameStats();
+    worldObjects = new List<SaveWorldObject>();
+  }
 }
 
 [Serializable]
 public class SaveGameStats
 {
   public SavePlayerStats player;
+
+  public SaveGameStats()
+  {
+    player = new SavePlayerStats();
+  }
 }
 
 [Serializable]
@@ -34,6 +45,13 @@ public class SavePlayerStats
   public SavePlayerCharacterStats stats;
   public List<SavePlayerPartyMember> playerParty;
   public SavePlayerInventory inventory;
+
+  public SavePlayerStats()
+  {
+    stats = new SavePlayerCharacterStats();
+    playerParty = new List<SavePlayerPartyMember>();
+    inventory = new SavePlayerInventory();
+  }
 }
 
 [Serializable]
@@ -92,12 +110,22 @@ public class SavePlayerCharacterStats
   public string armorHeadEquipped;
   public string armorChestEquipped;
   public string armorLegEquipped;
+
+  public SavePlayerCharacterStats()
+  {
+    // Initialize default values here
+  }
 }
 
 [Serializable]
 public class SavePlayerPartyMember
 {
   // Define the properties for the player party member as needed
+
+  public SavePlayerPartyMember()
+  {
+    // Initialize default values here
+  }
 }
 
 [Serializable]
@@ -109,14 +137,18 @@ public class SaveWorldObject
   public float worldObjectPositionY;
   public float worldObjectPositionZ;
   public bool isPlayer;
-  public bool isInteractable = true; // is interactable
-  public bool hasBeenInteracted = false; // has been interacted
-  public bool playerIsInRange = false; // is player in range
-  public bool playerIsOutRange = true; // is player out of range
-  public bool canDisplayMessage = true; // can display message
-  public bool canActivateMessage = false; // can activate message
+  public bool isInteractable = true;
+  public bool hasBeenInteracted = false;
+  public bool playerIsInRange = false;
+  public bool playerIsOutRange = true;
+  public bool canDisplayMessage = true;
+  public bool canActivateMessage = false;
 
-  // Constructor with arguments
+  public SaveWorldObject()
+  {
+    // Initialize default values here
+  }
+
   public SaveWorldObject(int objectId, string objectName, float posX, float posY, float posZ, bool player, bool interactable, bool interacted, bool playerinrange, bool playeroutofrange, bool displaymessage, bool activatemessage)
   {
     worldObjectId = objectId;
