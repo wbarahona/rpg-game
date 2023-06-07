@@ -45,20 +45,15 @@ public class WorldObjectManager
       {
         WorldObjectPersist.WorldObjectData worldObjectData = worldObject.GetWorldObjectData();
 
-        int instanceID = worldObjectData.worldObjectId;
-        string name = worldObjectData.worldObjectName;
         float positionX = worldObjectData.worldObjectPositionX;
         float positionY = worldObjectData.worldObjectPositionY;
-        float positionZ = worldObjectData.worldObjectPositionZ;
-        bool isPlayer = worldObjectData.isPlayer;
-        bool isInteractable = worldObjectData.isInteractable;
-        bool hasBeenInteracted = worldObjectData.hasBeenInteracted;
-        bool playerIsInRange = worldObjectData.playerIsInRange;
-        bool playerIsOutRange = worldObjectData.playerIsOutRange;
-        bool canDisplayMessage = worldObjectData.canDisplayMessage;
-        bool canActivateMessage = worldObjectData.canActivateMessage;
 
-        return new SavePlayerStats();
+        // TODO: Get the player information from the save data saved in the game data object
+
+        playerStats.playerPositionX = positionX;
+        playerStats.playerPositionY = positionY;
+
+        return playerStats;
       }
     }
     return playerStats;
