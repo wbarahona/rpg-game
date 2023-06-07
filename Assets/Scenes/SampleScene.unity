@@ -21721,6 +21721,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1140429062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8224579480833832516, guid: 14eb9ad2cbd654320984ecf428d86922, type: 3}
+  m_PrefabInstance: {fileID: 8182064848077189417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1140429075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140429062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133c3816b82b6486fb6618460cb5ecb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1216955074
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,21 @@
       "gamePlayTimeFormatted": "00:00:00",
       "inGameTime": 0,
       "score": 0,
+      "playerPositionX": 0,
+      "playerPositionY": 0,
+      "inventory": {
+        "items": [],
+        "inventorySize": 20,
+        "inventoryMaxSize": 100,
+        "inventoryGold": 0,
+        "inventoryMaxGold": 999999,
+        "inventoryWeight": 0,
+        "inventoryMaxWeight": 100,
+        "isInventoryOpen": false,
+        "isInventoryClosed": true,
+        "isInventoryFull": false,
+        "isInventoryEmpty": true
+      },
       "stats": {
         "characterID": 0,
         "characterName": "Default Name",
@@ -46,5 +61,21 @@
       },
       "playerParty": []
     }
-  }
+  },
+  "worldObjects": [
+    {
+      "worldObjectId": 0,
+      "worldObjectName": "Default,World Object Name",
+      "worldObjectPositionX": 0,
+      "worldObjectPositionY": 0,
+      "worldObjectPositionZ": 0,
+      "isPlayer": false,
+      "isInteractable": true,
+      "hasBeenInteracted": false,
+      "playerIsInRange": false,
+      "playerIsOutRange": true,
+      "canDisplayMessage": true,
+      "canActivateMessage": false
+    }
+  ]
 }

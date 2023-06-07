@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6607047216709264804}
   - component: {fileID: 6124689049972864309}
   - component: {fileID: 1784673454386400703}
+  - component: {fileID: 8025002448729109518}
   m_Layer: 0
   m_Name: GameItem
   m_TagString: Untagged
@@ -170,12 +171,39 @@ MonoBehaviour:
   statEffectName: 0
   itemClass: 3
   armorPiece: 0
+  isUpgradeable: 0
+  isSellable: 0
+  isBuyable: 0
+  isPickupable: 0
+  isCraftable: 0
+  isEquippeable: 0
   isEquipped: 0
+  isElemental: 0
+  itemElementalType: 0
   itemQuantity: 1
   itemWeight: 1
+  itemBaseValue: 1
+  itemBuyValue: 1
   itemSellValue: 1
   spawnChance: 1
+  itemRarity: 0
   gameItemLabel: {fileID: 4171676620148512955}
+  itemAttackType: {fileID: 0}
+  itemUpgradeType: 0
+  itemUpgradeLevel: 0
+  maxUpgradeLevel: 5
+--- !u!114 &8025002448729109518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495606062096040784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d355a16c37142b6904d66e151fd670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5417954591560405400
 PrefabInstance:
   m_ObjectHideFlags: 0

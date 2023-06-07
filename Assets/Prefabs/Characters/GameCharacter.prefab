@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5350795102451890581}
   - component: {fileID: 7521103941432932775}
   - component: {fileID: 4422701943917550455}
+  - component: {fileID: 6106599649702514741}
   m_Layer: 0
   m_Name: GameCharacter
   m_TagString: Player
@@ -185,6 +186,7 @@ MonoBehaviour:
   canAttack: 1
   canUseMagic: 1
   canUseItem: 1
+  isSpeaking: 0
   inventory:
     items: []
     inventorySize: 20
@@ -255,7 +257,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
+  lastMoveX: 0
+  lastMoveY: 0
   animator: {fileID: 7521103941432932775}
+--- !u!114 &6106599649702514741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265461512692578218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d355a16c37142b6904d66e151fd670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1529410966243809602
 PrefabInstance:
   m_ObjectHideFlags: 0
