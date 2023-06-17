@@ -7,19 +7,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-
-public class Inventory
+public struct Inventory
 {
-  public List<InventoryListItem> items = new List<InventoryListItem>();
-  public int inventorySize = 20;
-  public int inventoryMaxSize = 100;
-  public int inventoryGold = 0;
-  public int inventoryMaxGold = 999999;
-  public int inventoryWeight = 0;
-  public int inventoryMaxWeight = 100;
-  public bool isInventoryOpen = false;
-  public bool isInventoryClosed = true;
-  public bool isInventoryFull = false;
-  public bool isInventoryEmpty = true;
-  // TODO: add inventory management functions here or shall I use a different script for that like a monobehaviour with public fns that manage the inventory?
+    public List<InventoryListItem> items;
+    public int inventorySize;
+    public int inventoryMaxSize;
+    public int inventoryGold;
+    public int inventoryMaxGold;
+    public int inventoryWeight;
+    public int inventoryMaxWeight;
+    public bool isInventoryOpen;
+    public bool isInventoryClosed;
+    public bool isInventoryFull;
+    public bool isInventoryEmpty;
+
+    // Constructor
+    public Inventory(int size, int maxSize, int gold, int maxGold, int weight, int maxWeight)
+    {
+        items = new List<InventoryListItem>();
+        inventorySize = size;
+        inventoryMaxSize = maxSize;
+        inventoryGold = gold;
+        inventoryMaxGold = maxGold;
+        inventoryWeight = weight;
+        inventoryMaxWeight = maxWeight;
+        isInventoryOpen = false;
+        isInventoryClosed = true;
+        isInventoryFull = false;
+        isInventoryEmpty = true;
+    }
+
+    // TODO: Add inventory management functions here or use a different script like a MonoBehaviour with public methods to manage the inventory.
 }
